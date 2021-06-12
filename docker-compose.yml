@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  cron:
+    build: .
+    environment:
+      - MYSQL_HOST=mysql.local
+      - MYSQL_USER=nextcloud
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_PASSWORD=nextcloud
+      - REDIS_HOST=redis
+    restart: always
+
